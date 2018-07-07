@@ -1,0 +1,13 @@
+server.port: 8080
+mem-server: localhost:11211
+# mem-server: localhost:11211 localhost:11212 localhost:11213
+
+---
+spring.profiles: local1
+server.port: 8081
+mem-server: localhost:11212 localhost:11213 localhost:11211
+
+---
+spring.profiles: local2
+server.port: 8082
+mem-server: localhost:11213 localhost:11211 localhost:11212

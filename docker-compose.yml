@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  memcached1: &memcached
+    image: memcached
+    ports:
+      - 11211:11211
+
+  memcached2:
+    <<: *memcached
+    ports:
+      - 11212:11211
+
+  memcached3:
+    <<: *memcached
+    ports:
+      - 11213:11211
